@@ -17,9 +17,7 @@
         header {
             background: rgba(0, 0, 0, 0.9);
             padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
@@ -27,7 +25,7 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: bold;
             color: #00ff00;
             text-shadow: 0 0 10px #00ff00;
@@ -35,19 +33,20 @@
 
         nav ul {
             list-style: none;
-            display: flex;
-            margin: 0;
             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            margin-left: 2rem;
+            margin: 0 1.5rem;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #00ff00;
-            font-size: 1rem;
+            font-size: 1.2rem;
             transition: color 0.3s;
         }
 
@@ -56,33 +55,14 @@
         }
 
         .hero {
-            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             text-align: center;
             position: relative;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
-            filter: blur(10px) brightness(0.5);
-            z-index: -1;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 0;
         }
 
         .hero h1 {
@@ -93,13 +73,19 @@
             animation: glow 2s infinite alternate;
         }
 
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
-            }
-            100% {
-                text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
-            }
+        .content {
+            display: flex;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .content > div {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .content > div:not(:last-child) {
+            border-right: 2px solid #00ff00;
         }
 
         section {
@@ -115,11 +101,24 @@
             color: #00ff00;
             font-size: 0.9rem;
         }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+            }
+            100% {
+                text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">TechHobo</div>
+    </header>
+
+    <div class="hero">
+        <h1>HELLO WORLD</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -128,28 +127,22 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    </header>
-
-    <div class="hero">
-        <div class="hero-bg"></div>
-        <div class="overlay"></div>
-        <h1>HELLO WORLD</h1>
     </div>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to TechHobo Foundation, where technology meets innovation and education. We share knowledge, how-tos, and exciting projects.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Our Projects</h2>
-        <p>Explore our latest tech projects and collaborative efforts. Join us in making a difference through technology!</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to collaborate? Reach out to us at contact@techhobo.org.</p>
-    </section>
+    <div class="content">
+        <div>
+            <h2>About</h2>
+            <p>Welcome to TechHobo Foundation, where technology meets education and innovation.</p>
+        </div>
+        <div>
+            <h2>Projects</h2>
+            <p>Discover our hands-on tech projects and how-tos for the modern world.</p>
+        </div>
+        <div>
+            <h2>Contact</h2>
+            <p>Reach out to us at contact@techhobo.org for collaboration.</p>
+        </div>
+    </div>
 
     <footer>
         &copy; 2024 TechHobo Foundation. All rights reserved.
