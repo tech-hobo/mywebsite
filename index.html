@@ -4,82 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechHobo Foundation</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', cursive;
+            color: #00ff00;
+            background: black;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: radial-gradient(circle, #001f00, #000);
+            border-bottom: 2px solid #00ff00;
+        }
+        header h1 {
+            font-size: 2rem;
+            text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00;
+            animation: flicker 3s infinite;
+        }
+        header p {
+            font-size: 1rem;
+            color: #008000;
+            margin-top: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(90deg, #002600, #001300);
+            padding: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        nav a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+        }
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: url('./images/matrix_bg.png') center/cover no-repeat;
+            color: #00ff00;
+            animation: scroll-background 10s linear infinite;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: #00ff00;
+            color: black;
+            text-decoration: none;
+            border: 2px solid black;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .cta-button:hover {
+            background: #008000;
+            transform: translateY(-2px);
+        }
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            background: #001f00;
+            color: #00ff00;
+        }
+        .card {
+            background: linear-gradient(145deg, #002600, #001300);
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 255, 0, 0.4);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .card h3 {
+            color: #00ff00;
+            font-size: 1.2rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            background: #000;
+            color: #00ff00;
+            padding: 1rem;
+            border-top: 2px solid #00ff00;
+        }
+        /* Animations */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+            80% { opacity: 0.7; }
+        }
+        @keyframes scroll-background {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100%; }
+        }
+    </style>
 </head>
 <body>
-    <header class="text-white text-center bg-dark py-5" style="background: url('./images/hero_pic.jfif') center/cover no-repeat; position: relative;">
-        <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);"></div>
-        <div class="container position-relative">
-            <h1 class="display-4">Welcome to TechHobo Foundation</h1>
-            <p class="lead">Empowering the Next Generation in Technology</p>
-            <a href="#about" class="btn btn-warning btn-lg mt-3">Learn More</a>
-        </div>
+    <header>
+        <h1>Welcome to TechHobo Foundation</h1>
+        <p>Code the Future with a Retro Vibe</p>
+        <a href="#about" class="cta-button">Enter the Grid</a>
     </header>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">TechHobo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
-
-    <section class="hero py-5 bg-primary text-white text-center">
-        <div class="container">
-            <h1>Welcome to TechHobo</h1>
-            <p class="lead">Your gateway to innovation and technology education.</p>
+    <section class="hero">
+        <h1>Unlock the Matrix</h1>
+        <p>Sharing tech knowledge, how-tos, and innovative projects for the next generation.</p>
+    </section>
+    <section class="content">
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>Bridge the technology gap with education and creativity. Explore the endless possibilities of tech.</p>
+        </div>
+        <div class="card">
+            <h3>Projects</h3>
+            <p>From retro gaming mods to modern STEM tutorials, we have something for everyone.</p>
+        </div>
+        <div class="card">
+            <h3>Get Involved</h3>
+            <p>Join our mission to inspire young minds. Volunteer, contribute, or partner with us.</p>
         </div>
     </section>
-
-    <section id="about" class="content py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h3 class="card-title">Our Mission</h3>
-                            <p class="card-text">TechHobo Foundation aims to bridge the technology gap for children through exciting and innovative programs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h3 class="card-title">Programs</h3>
-                            <p class="card-text">Discover our coding bootcamps, STEM workshops, and hands-on activities for kids.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h3 class="card-title">Get Involved</h3>
-                            <p class="card-text">Join us as a volunteer or partner to make a difference in children's lives.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center text-white bg-dark py-4">
-        <div class="container">
-            <p class="mb-0">&copy; 2024 TechHobo Foundation | All Rights Reserved</p>
-        </div>
+    <footer>
+        &copy; 2024 TechHobo Foundation | Built with Passion and Pixels
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
