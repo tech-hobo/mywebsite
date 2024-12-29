@@ -27,6 +27,7 @@
             background: var(--background-gradient);
             background-attachment: fixed;
             scroll-behavior: smooth;
+            min-width: 320px;
         }
 
         header {
@@ -44,6 +45,7 @@
         .logo {
             display: flex;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .logo img {
@@ -91,6 +93,9 @@
             height: 80vh;
             background: url('https://raw.githubusercontent.com/tech-hobo/mywebsite/main/images/A_dark_and_moody_subway_train_car_set_in_an_underg.png') no-repeat center center/cover, #1a1a2e;
             color: #ffffff;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
         }
 
         .hero h1 {
@@ -178,6 +183,7 @@
             font-size: 0.8em;
         }
 
+        /* Media Queries for responsiveness */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5em;
@@ -189,6 +195,37 @@
 
             .section {
                 max-width: 95%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .logo h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .section {
+                padding: 40px 20px;
+            }
+
+            footer {
+                font-size: 0.9em;
             }
         }
     </style>
@@ -225,22 +262,20 @@
     <section id="mission" class="section">
         <h2>Our Mission</h2>
         <p>Our mission is to make technology accessible to all children, regardless of background, and inspire them to become the innovators and creators of tomorrow.</p>
-        <p>We aim to build a future where every child has the tools and knowledge they need to explore, learn, and create with technology.</p>
+        <ul>
+            <li>Promote equal access to technology</li>
+            <li>Empower the youth with tech skills</li>
+            <li>Inspire creativity and problem-solving through tech</li>
+        </ul>
     </section>
 
     <section id="vision" class="section">
         <h2>Our Vision</h2>
-        <p>We envision a world where children from every background have equal access to technology and the resources to develop the skills they need to thrive in the digital age.</p>
-        <ul>
-            <li>Providing hands-on technology workshops and events.</li>
-            <li>Fostering problem-solving skills through innovative learning methods.</li>
-            <li>Collaborating with schools and communities to share knowledge and experiences.</li>
-            <li>Mentoring children and young adults to encourage careers in tech fields.</li>
-        </ul>
+        <p>We envision a world where every child has the opportunity to learn and grow in the ever-evolving digital landscape. Our goal is to bridge the digital divide and provide a pathway for children from underserved communities to explore and thrive in the world of technology.</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Tech Hobo Foundation | <a href="mailto:david.knapp@techhobo.org">Contact Us</a></p>
+        <p>&copy; 2024 Tech Hobo Foundation | <a href="https://www.techhobo.org/terms" target="_blank">Terms of Use</a> | <a href="https://www.techhobo.org/privacy" target="_blank">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
