@@ -15,12 +15,54 @@
         body {
             font-family: Arial, sans-serif;
             color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background: url('https://raw.githubusercontent.com/tech-hobo/mywebsite/main/images/A_dark_and_moody_subway_train_car_set_in_an_underg.png') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
         }
 
         .container {
@@ -29,6 +71,7 @@
             padding: 20px;
             border-radius: 10px;
             max-width: 90%;
+            margin: 20px auto;
         }
 
         h1 {
@@ -57,11 +100,24 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <header>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/tech-hobo/mywebsite/main/images/logo.png" alt="Tech Hobo Logo">
+            <h1>Tech Hobo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://techhobo82.blogspot.com/?m=1" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container">
         <h1>Welcome to Tech Hobo</h1>
         <p>
             Every journey starts somewhere. This site is dedicated to capturing the stories, lessons, and connections that make technology more than just machines.
         </p>
-    </div>
+    </section>
 </body>
 </html>
