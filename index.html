@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to Tech Hobo, a site dedicated to sharing stories, lessons, and the human connections behind technology.">
-    <title>Tech Hobo</title>
+    <title>Tech Hobo Foundation</title>
     <style>
         * {
             margin: 0;
@@ -17,6 +17,7 @@
             color: white;
             background: url('https://raw.githubusercontent.com/tech-hobo/mywebsite/main/images/A_dark_and_moody_subway_train_car_set_in_an_underg.png') no-repeat center center/cover;
             background-attachment: fixed;
+            scroll-behavior: smooth;
         }
 
         header {
@@ -36,8 +37,8 @@
         }
 
         .logo img {
-            height: 100px;
-            margin-right: 20px;
+            height: 50px;
+            margin-right: 10px;
         }
 
         .logo h1 {
@@ -84,6 +85,15 @@
             line-height: 1.6;
         }
 
+        .section {
+            padding: 50px 20px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
         @media (min-width: 768px) {
             h1 {
                 font-size: 3em;
@@ -103,20 +113,44 @@
     <header>
         <div class="logo">
             <img src="https://raw.githubusercontent.com/tech-hobo/mywebsite/main/images/logo.png" alt="Tech Hobo Logo">
-            <h1>The TechHobo Foundation</h1>
+            <h1>Tech Hobo Foundation</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="https://techhobo82.blogspot.com/" target="_blank">Blog</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="https://techhobo82.blogspot.com/?m=1" target="_blank">Blog</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about" class="container">
-        <h1>Welcome to Tech Hobo</h1>
+    <section id="about" class="container section">
+        <h1>Welcome to Tech Hobo Foundation</h1>
         <p>
             Every journey starts somewhere. This site is dedicated to capturing the stories, lessons, and connections that make technology more than just machines.
+        </p>
+    </section>
+
+    <section id="mission" class="container section">
+        <h2>Our Mission</h2>
+        <p>
+            The TechHobo Foundation is a nonprofit organization founded by David Knapp with the mission of inspiring and educating children about technology. We aim to provide resources, opportunities, and hands-on experiences to spark excitement about STEM (Science, Technology, Engineering, and Math) fields, particularly in underserved communities.
+        </p>
+    </section>
+
+    <section id="vision" class="container section">
+        <h2>Our Vision</h2>
+        <p>
+            The foundation's vision includes:
+        </p>
+        <ul>
+            <li>Organizing workshops, programs, or events to teach kids about coding, robotics, and other tech skills.</li>
+            <li>Sharing stories, lessons, and insights from working in IT across various industries through its blog and online presence.</li>
+            <li>Encouraging creativity and problem-solving in young minds to help them see technology as a tool for innovation and empowerment.</li>
+        </ul>
+        <p>
+            Our ultimate goal is to make technology accessible and exciting for kids while fostering a future generation of tech enthusiasts and innovators.
         </p>
     </section>
 </body>
