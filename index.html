@@ -40,7 +40,7 @@
         }
         header {
             text-align: center;
-            padding: 50px;
+            padding: 50px 20px;
         }
         .hero {
             text-align: center;
@@ -51,19 +51,25 @@
             max-width: 600px;
             border: 2px solid #00ff00;
             border-radius: 10px;
+            box-shadow: 0 0 20px #00ff00;
         }
         h1 {
             font-size: 2.5em;
             text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
         }
+        p.tagline {
+            font-size: 1em;
+            margin: 10px 0;
+            text-shadow: 0 0 5px #00ff00;
+        }
         nav {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px 0;
         }
         nav a {
             color: #00ff00;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             padding: 10px 20px;
             border: 2px solid #00ff00;
             border-radius: 5px;
@@ -73,11 +79,53 @@
             background-color: #00ff00;
             color: black;
         }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .content h2 {
+            font-size: 2em;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .content p {
+            max-width: 700px;
+            margin: 10px auto;
+            line-height: 1.6;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .feature {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #00ff00;
+        }
+        .feature p {
+            font-size: 0.9em;
+            text-shadow: 0 0 5px #00ff00;
+        }
         footer {
             text-align: center;
             margin-top: 50px;
+            padding: 20px;
+            background: #000;
             color: #00ff00;
             font-size: 0.8em;
+            border-top: 2px solid #00ff00;
         }
     </style>
 </head>
@@ -85,20 +133,37 @@
     <div class="matrix" id="matrix"></div>
     <header>
         <h1>Welcome to TechHobo</h1>
-        <p>Exploring Tech, Gaming, and Creativity</p>
+        <p class="tagline">Exploring Tech, Gaming, and Creativity</p>
     </header>
     <div class="hero">
-        <img src="https://github.com/tech-hobo/mywebsite/blob/main/images/20241220_204027352_iOS.webp?raw=true" alt="Hero Image" style="width: 100%; max-width: 600px; border: 2px solid #00ff00; border-radius: 10px;">
+        <img src="https://github.com/tech-hobo/mywebsite/blob/main/images/20241220_204027352_iOS.webp?raw=true" alt="Hero Image">
     </div>
     <nav>
-        <a href="/blog">Blog</a>
-        <a href="/projects">Projects</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="https://techhobo82.blogspot.com/" target="_blank">TechHobo Blog</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="https://techhobo82.blogspot.com/" target="_blank">Blog</a>
+        <a href="#contact">Contact</a>
     </nav>
+    <div class="content" id="about">
+        <h2>About TechHobo</h2>
+        <p>TechHobo is your gateway to the intersection of technology, creativity, and exploration. From sharing industry insights to providing hands-on project showcases, our mission is to make technology accessible and engaging for everyone.</p>
+    </div>
+    <div class="features">
+        <div class="feature" id="projects">
+            <h3>Projects</h3>
+            <p>Explore our innovative projects that blend technology and creativity to solve real-world challenges.</p>
+        </div>
+        <div class="feature">
+            <h3>Blog</h3>
+            <p>Dive into our blog for insights, tutorials, and stories about the tech world. <a href="https://techhobo82.blogspot.com/" target="_blank">Read more.</a></p>
+        </div>
+        <div class="feature" id="contact">
+            <h3>Get in Touch</h3>
+            <p>Have questions or want to collaborate? <a href="#">Contact us</a> today!</p>
+        </div>
+    </div>
     <footer>
-        &copy; 2024 TechHobo Foundation
+        &copy; 2024 TechHobo Foundation. All rights reserved.
     </footer>
 
     <script>
