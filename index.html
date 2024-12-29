@@ -66,6 +66,42 @@
             color: #00bcd4;
         }
 
+        form {
+            display: flex;
+            margin-left: auto;
+            align-items: center;
+        }
+
+        #searchInput {
+            padding: 5px;
+            font-size: 1em;
+            border: 1px solid #f0f0f0;
+            border-radius: 5px;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #f0f0f0;
+        }
+
+        #searchInput::placeholder {
+            color: #cccccc;
+        }
+
+        #searchButton {
+            margin-left: 10px;
+            padding: 5px 10px;
+            font-size: 1em;
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #searchButton:hover {
+            background-color: #0097a7;
+        }
+
         .container {
             background-color: rgba(0, 0, 0, 0.7);
             text-align: center;
@@ -119,9 +155,12 @@
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="https://techhobo82.blogspot.com/?m=1" target="_blank">Blog</a></li>
-				<li><a href="#IT Wiki">IT Wiki</a></li>
             </ul>
         </nav>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search..." aria-label="Search">
+            <button type="button" id="searchButton">Search</button>
+        </form>
     </header>
 
     <section id="about" class="container section">
@@ -152,5 +191,25 @@
             Our ultimate goal is to make technology accessible and exciting for kids while fostering a future generation of tech enthusiasts and innovators.
         </p>
     </section>
+
+    <script>
+        document.getElementById('searchButton').addEventListener('click', function () {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.section');
+
+            sections.forEach(section => {
+                const content = section.innerText.toLowerCase();
+                if (content.includes(query)) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+
+            if (!query) {
+                sections.forEach(section => section.style.display = 'block');
+            }
+        });
+    </script>
 </body>
 </html>
